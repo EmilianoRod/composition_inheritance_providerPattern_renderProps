@@ -1,0 +1,83 @@
+html, body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-light{
+    background-color: #e1e1e1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0, 0.1);
+}
+
+.navbar-dark{
+    background-color: #333333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0, 0.1);
+}
+
+.logo-light {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo-dark {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ddd;
+}
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;  /* Tamaño fijo del ancho del switch */
+    height: 34px; /* Tamaño fijo de la altura del switch */
+}
+
+
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+    width: 60px;   /* Ancho fijo */
+    height: 34px;  /* Alto fijo */
+}
+
+/* El círculo dentro del switch */
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2121ff;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
